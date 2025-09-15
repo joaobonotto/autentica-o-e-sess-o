@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Dashboard
+  if user
+    p ID: #{user.id}
+    p Email: #{user.email}
+    p Criado em: #{user.createdAt}
+  else
+    p Usuário não encontrado.
+  hr
+  p Exemplo de rota protegida. Para ver todos os usuários (dev), acesse /app/users

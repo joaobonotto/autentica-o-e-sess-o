@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Sistema simples de autenticação
+    style.
+      body { font-family: Arial, sans-serif; padding: 20px; }
+      header { margin-bottom: 20px; }
+      form { margin-bottom: 10px; }
+      .error { color: red; }
+  body
+    header
+      if typeof userId !== 'undefined' && userId
+        a(href='/app/dashboard') Dashboard
+        form(action='/logout' method='post' style='display:inline; margin-left:10px;')
+          button(type='submit') Sair
+      else
+        a(href='/register') Registrar
+        |  ·
+        a(href='/login') Entrar
+      hr
+    block content
