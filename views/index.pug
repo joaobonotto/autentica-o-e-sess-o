@@ -1,12 +1,9 @@
 extends layout
 
 block content
-  h1 Bem-vindo
+  h1 Bem-vindo ao Sistema
   if userId
-    p Você está logado. Vá para o 
+    p Você está logado! Vá para o 
       a(href='/app/dashboard') dashboard.
   else
-    p Você não está logado. 
-    a(href='/register') Criar conta
-    |  ou 
-    a(href='/login') Entrar
+    p Crie sua conta ou faça login para continuar.
